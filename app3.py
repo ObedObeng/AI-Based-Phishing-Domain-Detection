@@ -1,3 +1,4 @@
+import os
 import socket
 import whois
 from urllib.parse import urlparse
@@ -85,7 +86,10 @@ def verify_url():
     print(f"Cleaned URL: {cleaned_url}")  # Debug print
 
     # Path to your trained model
-    model_path = r"D:\OB\doc\BCA 2022\3rd Year\Autumn Term\CAP449_INDUSTRY TRAINING\project\PhishHunt-1.01v\Malicious_URL_Prediction.h5"
+    model_path = os.path.join(
+        os.path.dirname(__file__),
+        "Malicious_URL_Prediction.h5"
+    )
 
     try:
         prediction = get_prediction(cleaned_url, model_path)

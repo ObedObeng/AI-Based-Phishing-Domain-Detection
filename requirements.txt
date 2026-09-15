@@ -1,3 +1,8 @@
-tensorflow==2.7
-regex
+Flask==3.0.3
+tensorflow==2.7.0
+protobuf==3.20.3
+numpy<2
+requests==2.32.3
+python-whois==0.8.0
+regex==2024.5.15
 urllib3==1.26.6
